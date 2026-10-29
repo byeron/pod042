@@ -7,7 +7,7 @@ AGENTS.md
 - Two failed tries on one step: stop, note what failed, re-plan
 - Pausing mid-task: leave `PLAN.md` so a new session can pick it up
 - Every task is one issue with acceptance criteria written into it, one worktree, one PR
-- Leave independent tasks in the `issue/` directory as Markdown files (`<number>-<slug>.md`, 0001-implement_new_feature.md). Set the `statue` field to one of the following: `open` / `needs-human` (blocked by a user) / `done` (meets completion criteria) / `close` (out of scope).
+- Leave independent tasks in the `issues/` directory as Markdown files (`<number>-<slug>.md`, 0001-implement_new_feature.md). Set the `statue` field to one of the following: `open` / `needs-human` (blocked by a user) / `done` (meets completion criteria) / `close` (out of scope).
 - When you can't decide something, write down why and stop, don't guess
 
 ## 2. Smallest change that works
