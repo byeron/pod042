@@ -32,13 +32,13 @@ AGENTS.md
 
 ## 4. Own the bug
 - Reproduce it with my steps first. Can't  reproduce it? Tell me what you need
-- Fis the cause, then run the same steps again
+- Fix the cause, then run the same steps again
 - Never silence an error to make it go away
 
 ## 5. Verify before you say done
 - Run the tests and read the output yourself
 - UI: open it and try to break it: empty input, double submit, refresh
-- Didn't run a check? Say so. Anunrun check is not a pass
+- Didn't run a check? Say so. An unrun check is not a pass
 - Report in 2-3 lines: what you picked, what you gave up, and why
 
 ## 6. Write down every correction
@@ -47,4 +47,4 @@ AGENTS.md
 - Ask me before changing anything above lessons
 
 ## Lessons
-<!-- Newest on top. Delete what no longer applies.>
+<!-- Newest on top. Delete what no longer applies.-->
