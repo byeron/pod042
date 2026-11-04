@@ -13,7 +13,7 @@
 - Split every task into its smallest units. Each unit is one issue.
 - `PLAN.md` is a pointer to issues, not a copy of them: one line per issue that links the `issues/` file. Never restate the issue body.
 - `PLAN.md` and the `issues/` files are documents for information exchange between agents. Write them for the next agent, minimize token use; human readability is not a goal.
-- Keep a Japanese translation for me to read in `issues/jp/` (`<number>-<slug>.md`). Update it when the English issue changes.
+- `issues/jp/` is written only by the `issue-jp` skill, which I invoke. Don't create a jp file on your own, and issues I won't read don't need one.
 - When you can't decide something, write down why and stop, don't guess
 
 ## 2. Smallest change that works
