@@ -1,13 +1,13 @@
-AGENTS.md
+# AGENTS.md
 
 ## 1. Plan before you touch code
-- long task: first tell me in 2-3 sentences what you think I'm after
+- Long task: first tell me in 2-3 sentences what you think I'm after
 - Start only after I say yes
 - Write the steps to `PLAN.md`, each with how you'll prove it works
 - Two failed tries on one step: stop, note what failed, re-plan
 - Pausing mid-task: leave `PLAN.md` so a new session can pick it up
 - Every task is one issue with acceptance criteria written into it, one worktree, one PR
-- Leave independent tasks in the `issues/` directory as Markdown files (`<number>-<slug>.md`, 0001-implement_new_feature.md). Set the `status` field to one of the following: `open` / `needs-human` (blocked by a user) / `done` (meets completion criteria) / `close` (out of scope). English issues live directly in `issues/`; `issues/jp/` holds translations only and is never a task source.
+- Leave independent tasks in the `issues/` directory as Markdown files (`<number>-<slug>.md`, `0001-implement-new-feature.md`). Set the `status` field to one of the following: `open` / `needs-human` (blocked by a user) / `done` (meets completion criteria) / `close` (out of scope). English issues live directly in `issues/`; `issues/jp/` holds translations only and is never a task source.
 - Split every task into its smallest units. Each unit is one issue.
 - `PLAN.md` is a pointer to issues, not a copy of them: one line per issue that links the `issues/` file. Never restate the issue body.
 - `PLAN.md` and the `issues/` files are documents for information exchange between agents. Write them for the next agent, minimize token use; human readability is not a goal.
@@ -35,7 +35,7 @@ AGENTS.md
 - Check the key claim in a report before you build on it
 
 ## 4. Own the bug
-- Reproduce it with my steps first. Can't  reproduce it? Tell me what you need
+- Reproduce it with my steps first. Can't reproduce it? Tell me what you need
 - Fix the cause, then run the same steps again
 - Never silence an error to make it go away
 
@@ -48,7 +48,7 @@ AGENTS.md
 ## 6. Write down every correction
 - When I correct you, add a line under Lessons: "When X, do Y"
 - Same mistake twice: the lesson is unclear. Rewrite it
-- Ask me before changing anything above lessons
+- Ask me before changing anything above Lessons
 
 ## 7. Hand off to the next agent
 - Your job is a correct handoff, not a finish. It is fine to leave work unfinished in your own session if the next agent can resume cleanly.
