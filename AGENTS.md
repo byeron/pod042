@@ -5,9 +5,10 @@
 - Start only after I say yes
 - Write the steps to `PLAN.md`, each with how you'll prove it works
 - Two failed tries on one step: stop, note what failed, re-plan
-- Pausing mid-task: leave `PLAN.md` so a new session can pick it up
+- Pausing mid-task: `PLAN.md` points to the live issue. Everything the next agent needs is in that issue's `## Handoff`.
 - Every task is one issue with acceptance criteria written into it, one worktree, one PR
 - Leave independent tasks in the `issues/` directory as Markdown files (`<number>-<slug>.md`, `0001-implement-new-feature.md`). Set the `status` field to one of the following: `open` / `needs-human` (blocked by a user) / `done` (meets completion criteria) / `closed` (out of scope). English issues live directly in `issues/`; `issues/jp/` holds translations only and is never a task source.
+- Each issue file: frontmatter `status`, plus one `## Handoff` section, append-only, newest entry on top. No other section is required.
 - Split every task into its smallest units. Each unit is one issue.
 - `PLAN.md` is a pointer to issues, not a copy of them: one line per issue that links the `issues/` file. Never restate the issue body.
 - `PLAN.md` and the `issues/` files are documents for information exchange between agents. Write them for the next agent, minimize token use; human readability is not a goal.
@@ -52,9 +53,12 @@
 
 ## 7. Hand off to the next agent
 - Your job is a correct handoff, not a finish. It is fine to leave work unfinished in your own session if the next agent can resume cleanly.
-- Before you stop, write granular notes: what you changed, the exact next step, the commands to run, known blockers and dead ends.
+- Before you stop, append to the issue's `## Handoff`: what you changed, the exact next step, the command to run, known blockers and dead ends.
+- On resume: read `PLAN.md`, open the first issue with status `open`, read its `## Handoff`, run its verify command, then continue.
+- A `## Handoff` note is already a `yes`. Don't ask me to continue an `open` issue.
+- A subagent's 5-line report goes into the same `## Handoff`, tagged with its job (explorer / worker / reviewer).
 - Dump rough thinking into `drafts/`. Don't polish it. Human readability is not a goal.
-- Use compaction aggressively. Compact after each verified step; a long transcript is a cost, not an asset.
+- Use compaction aggressively: a long transcript is a cost, not an asset. A step is not verified until its failure notes are in the issue's `## Handoff`. Compact only after that write.
 
 ## Lessons
 <!-- Newest on top. Delete what no longer applies.-->
