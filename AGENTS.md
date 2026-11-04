@@ -3,12 +3,13 @@
 ## 1. Plan before you touch code
 - Long task: first tell me in 2-3 sentences what you think I'm after
 - Start only after I say yes
-- Write the steps to `PLAN.md`, each with how you'll prove it works
+- Write the steps to `PLAN.md`. How each step is proven lives in the issue
 - Two failed tries on one step: stop, note what failed, re-plan
 - Pausing mid-task: `PLAN.md` points to the live issue. Everything the next agent needs is in that issue's `## Handoff`.
-- Every task is one issue with acceptance criteria written into it, one worktree, one PR
+- Every task is one issue, one worktree, one PR
 - Leave independent tasks in the `issues/` directory as Markdown files (`<number>-<slug>.md`, `0001-implement-new-feature.md`). Set the `status` field to one of the following: `open` / `needs-human` (blocked by a user) / `done` (meets completion criteria) / `closed` (out of scope). English issues live directly in `issues/`; `issues/jp/` holds translations only and is never a task source.
-- Each issue file: frontmatter `status`, plus one `## Handoff` section, append-only, newest entry on top. No other section is required.
+- Each issue file: frontmatter `status` and `verify` (the exact command that proves the issue done), then the acceptance criteria, then one `## Handoff` section, append-only, newest entry on top. Nothing else is required.
+- `verify` is never empty. No command proves the issue yet: set `status: needs-human` and ask me what should prove it.
 - Split every task into its smallest units. Each unit is one issue.
 - `PLAN.md` is a pointer to issues, not a copy of them: one line per issue that links the `issues/` file. Never restate the issue body.
 - `PLAN.md` and the `issues/` files are documents for information exchange between agents. Write them for the next agent, minimize token use; human readability is not a goal.
@@ -54,7 +55,7 @@
 ## 7. Hand off to the next agent
 - Your job is a correct handoff, not a finish. It is fine to leave work unfinished in your own session if the next agent can resume cleanly.
 - Before you stop, append to the issue's `## Handoff`: what you changed, the exact next step, the command to run, known blockers and dead ends.
-- On resume: read `PLAN.md`, open the first issue with status `open`, read its `## Handoff`, run its verify command, then continue.
+- On resume: read `PLAN.md`, open the first issue with status `open`, read its `## Handoff`, run its frontmatter `verify` command, then continue.
 - A `## Handoff` note is already a `yes`. Don't ask me to continue an `open` issue.
 - A subagent's 5-line report goes into the same `## Handoff`, tagged with its job (explorer / worker / reviewer).
 - Dump rough thinking into `drafts/`. Don't polish it. Human readability is not a goal.
