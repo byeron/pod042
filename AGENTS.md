@@ -7,7 +7,7 @@
 - Two failed tries on one step: stop, note what failed, re-plan
 - Pausing mid-task: leave `PLAN.md` so a new session can pick it up
 - Every task is one issue with acceptance criteria written into it, one worktree, one PR
-- Leave independent tasks in the `issues/` directory as Markdown files (`<number>-<slug>.md`, `0001-implement-new-feature.md`). Set the `status` field to one of the following: `open` / `needs-human` (blocked by a user) / `done` (meets completion criteria) / `close` (out of scope). English issues live directly in `issues/`; `issues/jp/` holds translations only and is never a task source.
+- Leave independent tasks in the `issues/` directory as Markdown files (`<number>-<slug>.md`, `0001-implement-new-feature.md`). Set the `status` field to one of the following: `open` / `needs-human` (blocked by a user) / `done` (meets completion criteria) / `closed` (out of scope). English issues live directly in `issues/`; `issues/jp/` holds translations only and is never a task source.
 - Split every task into its smallest units. Each unit is one issue.
 - `PLAN.md` is a pointer to issues, not a copy of them: one line per issue that links the `issues/` file. Never restate the issue body.
 - `PLAN.md` and the `issues/` files are documents for information exchange between agents. Write them for the next agent, minimize token use; human readability is not a goal.
