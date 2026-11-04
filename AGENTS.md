@@ -8,6 +8,9 @@ AGENTS.md
 - Pausing mid-task: leave `PLAN.md` so a new session can pick it up
 - Every task is one issue with acceptance criteria written into it, one worktree, one PR
 - Leave independent tasks in the `issues/` directory as Markdown files (`<number>-<slug>.md`, 0001-implement_new_feature.md). Set the `status` field to one of the following: `open` / `needs-human` (blocked by a user) / `done` (meets completion criteria) / `close` (out of scope).
+- Split every task into its smallest units. Each unit is one issue.
+- `PLAN.md` is a pointer to issues, not a copy of them: one line per issue that links the `issues/` file. Never restate the issue body.
+- `PLAN.md` is written for agents, not for humans. Minimize token use; human readability is not a goal.
 - When you can't decide something, write down why and stop, don't guess
 
 ## 2. Smallest change that works
@@ -45,6 +48,12 @@ AGENTS.md
 - When I correct you, add a line under Lessons: "When X, do Y"
 - Same mistake twice: the lesson is unclear. Rewrite it
 - Ask me before changing anything above lessons
+
+## 7. Hand off to the next agent
+- Your job is a correct handoff, not a finish. It is fine to leave work unfinished in your own session if the next agent can resume cleanly.
+- Before you stop, write granular notes: what you changed, the exact next step, the commands to run, known blockers and dead ends.
+- Dump rough thinking into `drafts/`. Don't polish it. Human readability is not a goal.
+- Use compaction aggressively. Compact after each verified step; a long transcript is a cost, not an asset.
 
 ## Lessons
 <!-- Newest on top. Delete what no longer applies.-->
