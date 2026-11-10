@@ -17,7 +17,7 @@ user-invocable: true
 
 ## Output
 
-One file per issue: `issues/jp/<number>-<slug>.md`, same name as the English file. Frontmatter: `status` (the current value, unchanged) and `検証` (the English frontmatter `verify` command, copied verbatim, not translated). Sections, in this order, each filled as shown when empty:
+One file per issue: `issues/jp/<number>-<slug>.md`, same name as the English file. Frontmatter: `status` (the current value, unchanged) and `検証` (the English frontmatter `verify` command, copied verbatim, not translated). Then the title line: `# ` plus the English issue's first `# ` heading, translated; the English issue has no heading: a short Japanese title translated from `<number>-<slug>`. Never invent one. Then sections, in this order, each filled as shown when empty:
 
 - `## 背景`: the issue's `## Background`, translated. No such section: summarize the body or title in 1-2 lines. No information at all: `記載なし`. Never invent one.
 - `## 問題点`: the issue's `## Problem`, translated. No such section but the body describes what is wrong: summarize it in 1-2 lines. No information at all: `記載なし`. Never invent one.
