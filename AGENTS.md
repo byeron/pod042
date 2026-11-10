@@ -8,7 +8,7 @@
 - Pausing mid-task: `PLAN.md` points to the live issue. Everything the next agent needs is in that issue's `## Handoff`.
 - Every task is one issue, one worktree, one PR
 - Leave independent tasks in the `issues/` directory as Markdown files (`<number>-<slug>.md`, `0001-implement-new-feature.md`). Set the `status` field to one of the following: `open` / `needs-human` (blocked by a user) / `done` (meets completion criteria) / `closed` (out of scope). English issues live directly in `issues/`; `issues/jp/` holds translations only and is never a task source.
-- Each issue file: frontmatter `status` and `verify` (the exact command that proves the issue done), then the acceptance criteria, then one `## Handoff` section, append-only, newest entry on top. Nothing else is required.
+- Each issue file: frontmatter `status` and `verify` (the exact command that proves the issue done), then `## Background` (why this issue exists, 1-3 lines), then `## Problem` (what is wrong today, 1-3 lines), then the acceptance criteria, then one `## Handoff` section, append-only, newest entry on top. Nothing else is required.
 - `verify` is never empty. No command proves the issue yet: set `status: needs-human` and ask me what should prove it.
 - Split every task into its smallest units. Each unit is one issue.
 - `PLAN.md` is a pointer to issues, not a copy of them: one line per issue that links the `issues/` file. Never restate the issue body.
