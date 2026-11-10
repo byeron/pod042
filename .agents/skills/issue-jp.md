@@ -17,16 +17,19 @@ user-invocable: true
 
 ## Output
 
-One file per issue: `issues/jp/<number>-<slug>.md`, same name as the English file. Five fields, no other content. Frontmatter: `status` (the current value, unchanged) and `検証` (the English frontmatter `verify` command, copied verbatim, not translated). Sections:
+One file per issue: `issues/jp/<number>-<slug>.md`, same name as the English file. Frontmatter: `status` (the current value, unchanged) and `検証` (the English frontmatter `verify` command, copied verbatim, not translated). Sections, in this order, each filled as shown when empty:
 
-- `## 完成条件`: the acceptance criteria, translated. 1-3 lines.
-- `## 現状`: the first line of `## Handoff`, translated. Empty `## Handoff`: `未着手`.
-- `## 私への質問`: each question waiting for the user, translated. None: `なし`.
+- `## 背景`: the issue's `## Background`, translated. No such section: summarize the body or title in 1-2 lines. No information at all: `記載なし`. Never invent one.
+- `## 問題点`: the issue's `## Problem`, translated. No such section but the body describes what is wrong: summarize it in 1-2 lines. No information at all: `記載なし`. Never invent one.
+- `## 終了条件`: the acceptance criteria, translated, one `- ` bullet per criterion. Keep every criterion; compress the wording, never drop an item.
+- `## 進行中`: from the newest (top) `## Handoff` entry: a `- ` bullet for what was changed, a `- ` bullet for the exact next step. Empty `## Handoff`: `未着手`.
+- `## ブロック`: blockers and dead ends named in any `## Handoff` entry that still hold, one `- ` bullet each, each question waiting for the user included. None: `なし`.
+- `## ユーザーのコメント`: instructions or decisions from the user recorded in `## Handoff`, one `- ` bullet each, newest first. Do not mix in agent notes. None: `なし`.
 
 ## Rules
 
 - Don't edit the English issue. Don't change any `status`. Don't run any `verify` command.
-- Don't copy the English body or the `## Handoff` history. Summarize.
-- Update an existing jp file in place, same length or shorter.
+- Don't copy the English body or the `## Handoff` history. Extract and summarize; one section may cite at most one short quote.
+- `背景` and `問題点` stay prose, 1-2 lines. The four bullet sections (`終了条件`, `進行中`, `ブロック`, `ユーザーのコメント`) use `- ` items, at most 3 each, except `終了条件` which gets one bullet per criterion. Update an existing jp file in place.
 - Never add Japanese text to `issues/`, `PLAN.md`, or `drafts/`.
 - Report one line per file written: `<path>: <status>`. One line per issue skipped: `<path>: skipped`.
